@@ -17,6 +17,13 @@ cd to the client-hint directory and run:
 mvn -s settings.xml thorntail:run
 ```
 
+The thorntail server will fire up and you are ready to play around. 
+* Default Address: http://localhost:8080
+* Web Root: src/main/webapp -> /
+* REST Root: /rest
+* EchoEndpoint: src/main/java/com/thunderhead/clienthint/rest/EchoEndpoint.java points to /rest/echo
+
+
 ### Making changes
 
 * Java changes require restart of the thorntail service. 
