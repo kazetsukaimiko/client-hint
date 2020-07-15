@@ -6,8 +6,9 @@ A Basic [thorntail project](https://thorntail.io/) to test client hint APIs.
 ### Contributing
 * First and foremost, you require a GitHub account. Start there.
 * Fork this project.
-* Make changes in a non-master branch
-* Submit a PR against kazetsukaimiko/master.
+* Make changes in your fork, committing/pushing there.
+* Submit a PR against kazetsukaimiko/master to get your changes upstream.
+* Pull from upstream to get my changes into your fork.
 
 ### Starting Thorntail
 
