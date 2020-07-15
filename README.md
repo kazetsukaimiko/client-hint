@@ -1,29 +1,23 @@
-# README #
+# Client Hint #
+A Basic [thorntail project](https://thorntail.io/) to test client hint APIs.
 
-This README would normally document whatever steps are necessary to get your application up and running.
+## How to use this ##
 
-### What is this repository for? ###
+### Contributing
+* First and foremost, you require a GitHub account. Start there.
+* Fork this project.
+* Make changes in a non-master branch
+* Submit a PR against kazetsukaimiko/master.
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+### Starting Thorntail
 
-### How do I get set up? ###
+cd to the client-hint directory and run:
+```
+mvn -s settings.xml thorntail:run
+```
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+### Making changes
 
-### Contribution guidelines ###
+* Java changes require restart of the thorntail service. 
+* Anything under src/main/webapp is a web asset and is live updateable.
 
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
