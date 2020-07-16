@@ -26,6 +26,7 @@ public class EchoEndpoint {
     @Produces(MediaType.APPLICATION_JSON)
     public Map<String, String> doGet() {
         setHeader("Brownie", String.valueOf(System.currentTimeMillis()));
+        setHeader("Access-Control-Allow-Origin", "*");
         return enumerationAsStream(request.getHeaderNames())
                 .collect(Collectors.toMap(
                         k -> k,
