@@ -41,7 +41,6 @@ Running the above commands, the thorntail server will fire up and you are ready 
 * REST Root: /rest
 * EchoEndpoint: src/main/java/com/thunderhead/clienthint/rest/EchoEndpoint.java points to /rest/echo
 
-Both services use the same keystore
 
 ### Making changes
 
