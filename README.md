@@ -46,5 +46,5 @@ Both services use the same keystore
 ### Making changes
 
 * Java changes require restart of the thorntail service. 
-* Anything under src/main/webapp is a web asset and is live updateable.
+* Anything under src/main/webapp is a web asset and is live updateable (with the exception of jsps).
 
