@@ -13,13 +13,28 @@ A Basic [thorntail project](https://thorntail.io/) to test client hint APIs.
 
 ### Starting Thorntail
 
-cd to the client-hint directory and run:
+There are two services instances you need to start to test feature policy:
+* 1st Party : The 1st party website.
+* 3rd Party : The 3rd party tracking service.
+
+First, for each instance, open a terminal and cd to the client-hint directory.
+
+#### Starting the 3rd Party service (http://localhost:8080, https://localhost:8443)
+
 ```
-mvn -s settings.xml thorntail:run
+mvn -s settings.xml thorntail:run -P 3rdparty
 ```
 
-The thorntail server will fire up and you are ready to play around. 
-* Default Address: http://localhost:8080
+#### Starting the 1st Party service (http://localhost:80, https://localhost:443)
+
+```
+mvn -s settings.xml thorntail:run -P 1stparty
+```
+
+#### Common to both
+
+Running the above commands, the thorntail server will fire up and you are ready to play around. 
+
 * Web Root: src/main/webapp -> /
 * REST Root: /rest
 * EchoEndpoint: src/main/java/com/thunderhead/clienthint/rest/EchoEndpoint.java points to /rest/echo
