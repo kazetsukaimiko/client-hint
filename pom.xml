@@ -56,6 +56,8 @@
           <bundleDependencies>false</bundleDependencies>
           <properties>
             <thorntail.port.offset>${port.offset}</thorntail.port.offset>
+            <thorntail.https.keystore.path>${project.basedir}/${keystore.file}</thorntail.https.keystore.path>
+            <thorntail.https.keystore.password>password</thorntail.https.keystore.password>
           </properties>
         </configuration>
         <executions>
@@ -109,20 +111,23 @@
   </dependencies>
 
   <profiles>
-    <!-- The third party tracker. -->
-    <profile>
-      <id>3rdparty</id>
-      <properties>
-        <port.offset>0</port.offset>
-      </properties>
-    </profile>
-
     <!-- The 1st party website. -->
     <profile>
       <id>1stparty</id>
       <properties>
         <port.offset>-8000</port.offset>
+        <keystore.file>1stparty.jks</keystore.file>
       </properties>
     </profile>
+
+    <!-- The third party tracker. -->
+    <profile>
+      <id>3rdparty</id>
+      <properties>
+        <port.offset>0</port.offset>
+        <keystore.file>3rdparty.jks</keystore.file>
+      </properties>
+    </profile>
+
   </profiles>
 </project>

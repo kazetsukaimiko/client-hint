@@ -1,8 +1,1 @@
 thorntail:
-#  http:
-#    port: ${http.port}
-  https:
-    keystore:
-      path: ${project.basedir}/keystore.jks
-      password: password
-#    port: ${https.port}
