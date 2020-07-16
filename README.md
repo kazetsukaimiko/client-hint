@@ -19,19 +19,21 @@ There are two services instances you need to start to test feature policy:
 
 First, for each instance, open a terminal and cd to the client-hint directory.
 
-#### Starting the 3rd Party service (http://localhost:8080, https://localhost:8443)
-
-```
-mvn -s settings.xml thorntail:run -P 3rdparty
-```
-
-#### Starting the 1st Party service (http://localhost:80, https://localhost:443)
+#### Starting the 1st Party service (http://localhost:80, https://localhost:443, Keystore: 1stparty.jks)
 
 ```
 mvn -s settings.xml thorntail:run -P 1stparty
 ```
 
+#### Starting the 3rd Party service (http://localhost:8080, https://localhost:8443, Keystore: 3rdparty.jks)
+
+```
+mvn -s settings.xml thorntail:run -P 3rdparty
+```
+
 #### Common to both
+
+DO NOT RUN BOTH COMMANDS SIMULTANEOUSLY. They each have to build the codebase, wait for one to finish starting and then run the other.
 
 Running the above commands, the thorntail server will fire up and you are ready to play around. 
 
@@ -39,6 +41,7 @@ Running the above commands, the thorntail server will fire up and you are ready 
 * REST Root: /rest
 * EchoEndpoint: src/main/java/com/thunderhead/clienthint/rest/EchoEndpoint.java points to /rest/echo
 
+Both services use the same keystore
 
 ### Making changes
 
